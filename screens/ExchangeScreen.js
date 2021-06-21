@@ -14,6 +14,11 @@ export default class ExchangeScreen extends Component{
             description: '',
         }
     }
+
+    createUniqueId(){
+        return Math.random().toString(36).substring(7);
+      }
+
     addItem = (itemName,description)=>{
         var userName = this.state.userName
         db.collection("exchange_requests").add({
