@@ -1,18 +1,22 @@
-import * as React from "react";
+import React from 'react';
 import { createDrawerNavigator } from "react-navigation-drawer";
-import MyBarters from "../screens/MyBarters";
+import MyBarters from "../screens/MyBarter";
+import NotificationScreen from '../screens/NotificationScreen';
 import SettingsScreen from "../screens/SettingsScreen";
 import {AppTabNavigator} from "./AppTabNavigator";
 import CustomSideBar from "./components/CustomSideBar";
 
 export const AppDrawerNavigator = createDrawerNavigator(
   {
-  Home: { 
-      screen: AppTabNavigator 
+    Home: { 
+        screen: AppTabNavigator 
     },
-  MyBarters:{
-    screen: MyBarters
-  },
+   MyBarter:{
+     screen: MyBarters
+   },
+   Notification:{
+     screen: NotificationScreen
+   },
   Settings: {
     screen: SettingsScreen
   },

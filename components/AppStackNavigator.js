@@ -1,28 +1,32 @@
 import react from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
-
 import LoginScreen from './screens/LoginScreen';
-import ReceiverDetailsScreen  from '../screens/ReceiverDetailsScreen';
-
-
-
+import NotificationScreen from '../screens/NotificationScreen';
+import RecieverDetails from '../screens/RecieverDetails';
 
 export const AppStackNavigator = createStackNavigator({
   BarterList : {
-    screen : LoginScreen,
+    screen: LoginScreen,
     navigationOptions:{
       headerShown : false
     }
   },
 
   ReceiverDetails : {
-    screen : ReceiverDetailsScreen,
+    screen: RecieverDetails,
     navigationOptions:{
       headerShown : false
     }
   },
 
+  Notification:{
+    screen: NotificationScreen,
+    navigationOptions:{
+      headerShown : false
+    }
+  },
 },
+
   {
     initialRouteName: 'BarterList'
   }
