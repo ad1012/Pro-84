@@ -17,6 +17,15 @@ export default class MyBarters extends Component {
      this.requestRef= null
    }
 
+   getAllBarters =()=>{ 
+     this.requestRef = db.collection("all_Barters").where("donor_id" ,'==', this.state.userId)
+     .onSnapshot((snapshot)=>{ 
+       var allBarters = snapshot.docs.map(document => document.data()); 
+       this.setState({ allBarters : allBarters, }); 
+      }) 
+    }
+
+
    keyExtractor = (item, index) => index.toString()
 
    renderItem = ( {item, i} ) =>(
